@@ -100,26 +100,9 @@ h1, h2 {
     line-height: 1.6;
 }
 
-.btn-rainbow {
-    background: linear-gradient(45deg, #ff9aa2, #ffb7b2, #ffdac1, #e2f0cb, #b5ead7, #c7ceea);
-    background-size: 400% 400%;
-    color: #444 !important;
-    padding: 12px 30px;
-    border-radius: 50px;
-    font-weight: 500;
-    transition: 0.3s;
-    animation: rainbow-bg 8s linear infinite;
-    border: none;
-    cursor: pointer;
-}
-
-.credit a {
-    color: rgba(255, 255, 255, 0.6);
-    font-size: 0.9rem;
+    color: #b3b3b3;
     text-decoration: none;
-    font-weight: 300;
+    font-size: 1rem;
 }
+.back-link:hover { color: #fff; text-decoration: underline; }
 
-.credit a:hover {
-    color: #ffb6c1;
-}
