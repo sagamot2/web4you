@@ -1,7 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Mitr:wght@300;400;500&family=Sriracha&display=swap');
+
 body {
     margin: 0;
-    font-family: 'Montserrat', sans-serif;
-    color: #a70f0f;
+    font-family: 'Mitr', sans-serif; 
+    color: #ffffff; 
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -14,21 +16,19 @@ body {
     z-index: 0;
     overflow-x: hidden;
 }
-
 body::before {
     content: "";
     position: fixed;
     top: 0; left: 0; right: 0; bottom: 0;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.4); 
     z-index: -1;
 }
-
 @keyframes neon-pulse {
     0%, 100% {
-        box-shadow: inset 0 0 15px rgba(255, 105, 180, 0.7), 0 0 15px rgba(231, 43, 137, 0.7);
+        box-shadow: inset 0 0 15px rgba(255, 182, 193, 0.5), 0 0 15px rgba(255, 182, 193, 0.5);
     }
     50% {
-        box-shadow: inset 0 0 25px rgba(255, 105, 180, 0.9), 0 0 25px rgba(255, 105, 180, 0.9);
+        box-shadow: inset 0 0 25px rgba(255, 105, 180, 0.7), 0 0 25px rgba(255, 105, 180, 0.7);
     }
 }
 
@@ -36,98 +36,90 @@ body::after {
     content: "";
     position: fixed; 
     top: 10px; left: 10px; right: 10px; bottom: 10px;
-    border: 4px solid #f557a6bb;
+    border: 3px solid rgba(255, 192, 203, 0.6);
     border-radius: 25px;      
     pointer-events: none;     
-    z-index: 9999;            
-    animation: neon-pulse 2s infinite ease-in-out;
+    z-index: 9999;             
+    animation: neon-pulse 3s infinite ease-in-out;
 }
 
-h1, h2 { font-weight: 700; text-shadow: 0 0 8px rgba(0,0,0,0.8); text-align: center; }
-p { font-weight: 400; font-size: 1.1rem; color: #d0d0d0; text-shadow: 0 0 6px rgba(0,0,0,0.6); }
+h1, h2 { 
+    font-family: 'Sriracha', cursive;
+    font-weight: 400; 
+    color: #ffb6c1; 
+    text-shadow: 2px 2px 10px rgba(0,0,0,0.5); 
+    text-align: center; 
+}
+.slide-button {
+    display: block;
+    width: 280px;
+    margin: 15px auto;
+    padding: 15px;
+    background: rgba(255, 255, 255, 0.15); 
+    color: #fff;
+    text-decoration: none;
+    border-radius: 15px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(5px);
+    transition: all 0.3s ease;
+    text-align: center;
+    font-size: 1.1rem;
+}
 
+.slide-button:hover {
+    background: rgba(255, 182, 193, 0.4);
+    transform: translateY(-5px);
+    border-color: #ffb6c1;
+}
 .player-container {
     width: 100%;
-    max-width: 600px;
-    background-color: rgba(40, 40, 40, 0.85);
-    border-radius: 12px;
+    max-width: 500px;
+    background-color: rgba(20, 20, 20, 0.7);
+    border-radius: 20px;
     padding: 1.5rem;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
     text-align: center;
-    backdrop-filter: blur(8px);
+    backdrop-filter: blur(12px);
     margin-bottom: 2rem;
+    border: 1px solid rgba(255, 255, 255, 0.1);
 }
-
-iframe { width: 100%; border: none; border-radius: 12px; margin-bottom: 1rem; }
-
-.btn {
-    display: inline-block;
-    background-color: #1DB954;
-    color: #fff;
-    font-weight: 700;
-    text-decoration: none;
-    padding: 12px 30px;
-    border-radius: 50px;
-    font-size: 1rem;
-    transition: 0.3s;
-    cursor: pointer;
-    border: none;
-}
-.btn:hover { background-color: #1ed760; transform: scale(1.05); }
-
 .quote-container {
     margin: 10px auto 25px;
     padding: 15px 25px;
     max-width: 400px;
-    background: rgba(255, 105, 180, 0.2);
+    background: rgba(255, 182, 193, 0.15);
     border-radius: 20px;
-    border-left: 6px solid #ff69b4;
+    border-left: 5px solid #ffb6c1;
     backdrop-filter: blur(10px);
-    box-shadow: 0 8px 32px rgba(0,0,0,0.2);
 }
 
 #random-quote {
     font-family: 'Sriracha', cursive;
-    font-size: 1.2rem;
-    color: #fff;
-    margin: 0;
-    text-shadow: 1px 1px 4px rgba(0,0,0,0.4);
-    line-height: 1.5;
-}
-
-@keyframes rainbow-bg {
-    0% { background-position: 0% 50%; }
-    50% { background-position: 100% 50%; }
-    100% { background-position: 0% 50%; }
-}
-
-@keyframes rainbow-glow {
-    0%, 100% { box-shadow: 0 0 15px #ff0000; }
-    33% { box-shadow: 0 0 15px #00ff00; }
-    66% { box-shadow: 0 0 15px #0000ff; }
+    font-size: 1.1rem;
+    color: #ffe4e1;
+    line-height: 1.6;
 }
 
 .btn-rainbow {
-    display: inline-block;
-    background: linear-gradient(45deg, #ff0000, #ff7f00, #ffff00, #00ff00, #0000ff, #4b0082, #8b00ff);
+    background: linear-gradient(45deg, #ff9aa2, #ffb7b2, #ffdac1, #e2f0cb, #b5ead7, #c7ceea);
     background-size: 400% 400%;
-    color: #fff !important;
-    font-weight: 700;
-    text-decoration: none;
-    padding: 14px 35px;
+    color: #444 !important;
+    padding: 12px 30px;
     border-radius: 50px;
-    font-size: 1.1rem;
+    font-weight: 500;
+    transition: 0.3s;
+    animation: rainbow-bg 8s linear infinite;
     border: none;
     cursor: pointer;
-    transition: transform 0.3s ease;
-    animation: rainbow-bg 5s linear infinite, rainbow-glow 3s linear infinite;
 }
-.btn-rainbow:hover { transform: scale(1.1); filter: brightness(1.2); }
 
-.back-link {
-    margin-top: 2rem;
-    color: #b3b3b3;
+.credit a {
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 0.9rem;
     text-decoration: none;
-    font-size: 1rem;
+    font-weight: 300;
 }
-.back-link:hover { color: #fff; text-decoration: underline; }
+
+.credit a:hover {
+    color: #ffb6c1;
+}
