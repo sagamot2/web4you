@@ -1,0 +1,93 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #fff;
+    overflow: hidden;
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: url('https://media3.giphy.com/media/v1.Y2lkPWVjZjA1ZTQ3NHU5cDcwdjR4a3k2NnU5anl3ZGg1cGtsbzRwNGR1NGRheGJob2drMiZlcD12MV9naWZzX3NlYXJjaCZjdD1n/X5Lta1bjuULTubmGzR/giphy.webp') 
+                center center / cover no-repeat fixed;
+    z-index: -1;
+    opacity: 0.7;
+}
+
+#overlay {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100vw; height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0,0,0,0.6);
+    backdrop-filter: blur(10px);
+    z-index: 999;
+}
+
+.glass-box {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 25px;
+    padding: 40px;
+    width: 90%;
+    max-width: 400px;
+    text-align: center;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.5);
+    border: 1px solid rgba(255,255,255,0.2);
+}
+
+.glass-box h2 {
+    font-size: 1.8em;
+    margin-bottom: 15px;
+    color: #ffb6c1; 
+}
+
+.glass-box p {
+    font-size: 1.1em;
+    line-height: 1.6;
+    margin-bottom: 25px;
+}
+
+.answer-input {
+    width: 80%;
+    padding: 12px 15px;
+    border-radius: 12px;
+    border: 1px solid rgba(255,255,255,0.3);
+    background: rgba(255,255,255,0.1);
+    color: #fff;
+    font-size: 16px;
+    outline: none;
+    margin-bottom: 20px;
+    transition: 0.3s;
+}
+
+.answer-input::placeholder { color: rgba(255,255,255,0.5); }
+.answer-input:focus { background: rgba(255,255,255,0.2); border-color: #ffb6c1; }
+
+.btn-send {
+    background: #5865F2; 
+    color: white;
+    border: none;
+    padding: 12px 30px;
+    border-radius: 50px;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 1em;
+    transition: 0.3s;
+    box-shadow: 0 4px 15px rgba(88, 101, 242, 0.4);
+}
+
+.btn-send:hover { transform: scale(1.05); background: #4752c4; }
+
+.back-link {
+    display: block;
+    margin-top: 20px;
+    color: rgba(255,255,255,0.6);
+    text-decoration: none;
+    font-size: 0.9em;
+}
+
+.back-link:hover { color: #fff; }
