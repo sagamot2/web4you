@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Anuphan:wght@300;400;600&display=swap');
+
 html, body {  
     margin: 0; 
     padding: 0; 
@@ -19,11 +21,12 @@ html, body {
     50% { background-position: 100% 50%; }
     100% { background-position: 0% 50%; }
 }
+
 .glass-card {
     background: rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(15px);
     -webkit-backdrop-filter: blur(15px);
-    border: 1px solid rgba(206, 27, 27, 0);
+    border: 1px solid rgba(255, 255, 255, 0.1);
     border-radius: 30px;
     padding: 40px 30px;
     width: 85%;
@@ -33,7 +36,7 @@ html, body {
     animation: fadeIn 1s ease-out;
 }
 
-h1, h2 {
+h1 {
     margin-top: 0;
     background: linear-gradient(to right, #fff, #ffb6c1);
     -webkit-background-clip: text;
@@ -41,23 +44,7 @@ h1, h2 {
     -webkit-text-fill-color: transparent;
     font-weight: bold;
 }
-input, textarea {
-    width: 100%;
-    padding: 12px;
-    margin-bottom: 15px;
-    border: 1px solid rgba(255, 255, 255, 0.3);
-    background: rgba(255, 255, 255, 0.05);
-    color: #fff;
-    border-radius: 10px;
-    font-family: 'Anuphan', sans-serif;
-    transition: all 0.3s ease;
-}
 
-input:focus, textarea:focus {
-    outline: none;
-    background: rgba(255, 255, 255, 0.1);
-    border-color: rgba(255, 182, 193, 0.8);
-}
 p {
     font-size: 1.1rem;
     line-height: 1.6;
@@ -65,32 +52,26 @@ p {
     color: #f1f1f1; 
     text-shadow: 0 2px 4px rgba(0,0,0,0.2);
 }
-.back-link, a[href] {
+
+.back-link {
     display: inline-block;
     padding: 12px 30px;
     margin-top: 15px;
-    color: #fff;         
-    text-decoration: none;     
-    border: 2px solid rgba(255, 182, 193, 0.5); 
-    border-radius: 50px;        
+    color: #fff;          
+    text-decoration: none;      
+    border: 2px solid rgba(255, 255, 255, 0.3); 
+    border-radius: 50px;         
     background: linear-gradient(45deg, rgba(216, 24, 200, 0.6), rgba(255, 105, 180, 0.6));
     backdrop-filter: blur(5px);
     transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); 
     font-weight: bold;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
 }
 
-.back-link:hover, a[href]:hover {
-    background: #ffb6c1;      
-    color: #40055d;             
-    box-shadow: 0 0 25px rgba(255, 182, 193, 0.9);
+.back-link:hover {
     transform: scale(1.1) translateY(-5px);
+    box-shadow: 0 0 25px rgba(255, 255, 255, 0.4);
 }
 
-@keyframes fadeIn {
-    from { opacity: 0; transform: translateY(20px); }
-    to { opacity: 1; transform: translateY(0); }
-}
 .contact-floating {
     position: fixed;
     bottom: 25px;  
@@ -116,55 +97,37 @@ p {
     transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
-.contact-btn::before {
-    content: "";
-    position: absolute;
-    top: -2px; left: -2px; right: -2px; bottom: -2px;
-    background: linear-gradient(45deg, #00f2fe, #4facfe, #00f2fe);
-    background-size: 400%;
-    z-index: -1;
-    border-radius: 50px;
-    opacity: 0;
-    transition: 0.5s;
-    filter: blur(10px);
-}
-
 .status-dot {
     width: 10px;
     height: 10px;
-    background-color: #00ff00; 
+    background-color: #ffb6c1; 
     border-radius: 50%;
-    box-shadow: 0 0 10px #00ff00;
-    animation: pulse-green 2s infinite;
+    box-shadow: 0 0 10px #ffb6c1;
+    animation: pulse-pink 2s infinite;
 }
 
-@keyframes pulse-green {
-    0% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(0, 255, 0, 0.7); }
-    70% { transform: scale(1); box-shadow: 0 0 0 10px rgba(0, 255, 0, 0); }
-    100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(0, 255, 0, 0); }
+@keyframes pulse-pink {
+    0% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(255, 182, 193, 0.7); }
+    70% { transform: scale(1); box-shadow: 0 0 0 10px rgba(255, 182, 193, 0); }
+    100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(255, 182, 193, 0); }
 }
 
 .contact-btn:hover {
     transform: translateY(-5px) scale(1.05);
-    border-color: #00f2fe;
-    color: #00f2fe;
+    background: rgba(255, 182, 193, 0.2);
+    border-color: #ffb6c1;
 }
 
-.contact-btn:hover::before {
-    opacity: 1;
-    animation: rainbow-bg 3s linear infinite;
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
 }
-@media (max-width: 480px) {
-    .contact-floating {
-        bottom: 20px;
-        right: 15px;
-    }
-    .contact-btn {
-        padding: 10px 15px;
-        font-size: 0.8rem;
-    }
 
+@keyframes rainbow-bg {
+    0% { background-position: 0% 50%; }
+    100% { background-position: 100% 50%; }
 }
+
 .progress-container {
   position: fixed;
   top: 0;
@@ -180,4 +143,15 @@ p {
   background-size: 400% 400%;
   width: 0%; 
   animation: rainbow-bg 5s linear infinite; 
+}
+
+@media (max-width: 480px) {
+    .contact-floating {
+        bottom: 20px;
+        right: 15px;
+    }
+    .contact-btn {
+        padding: 10px 15px;
+        font-size: 0.8rem;
+    }
 }
