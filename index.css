@@ -18,8 +18,6 @@ html, body {
   justify-content: center;
   align-items: center;
 }
-
-/* เมนูขวาบน */
 .nav-container {
   position: fixed;
   top: 25px;
@@ -54,14 +52,14 @@ html, body {
   margin-top: 15px;
   border-radius: 20px;
   overflow: hidden;
-  max-height: 0; /* ซ่อนไว้ก่อน */
+  max-height: 0; 
   transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
   opacity: 0;
   border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .menu-list.active {
-  max-height: 500px; /* แสดงผล */
+  max-height: 500px; 
   opacity: 1;
   padding: 10px 0;
 }
@@ -80,7 +78,6 @@ html, body {
   color: #ffb6c1;
 }
 
-/* ส่วนกลางจอ */
 .hero-section h1 {
   font-size: 4em;
   font-family: 'Sriracha', cursive;
@@ -94,7 +91,7 @@ html, body {
   color: #ccc;
 }
 
-/* Progress Bar */
+
 .progress-container { position: fixed; top: 0; z-index: 10001; width: 100%; height: 5px; }
 .progress-bar { height: 100%; background: linear-gradient(90deg, #ff0000, #ff7f00, #ffff00, #00ff00, #0000ff, #4b0082, #8b00ff); width: 0%; }
 .credit { position: absolute; bottom: 20px; }
@@ -165,3 +162,4 @@ html, body {
     }
     .footer-left { font-size: 0.65rem; }
 }
+
