@@ -3,31 +3,40 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Contact Me 📞</title>
     <link rel="stylesheet" href="contack.css">
+    <link href="https://fonts.googleapis.com/css2?family=Anuphan:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
 <body>
     <div class="progress-container">
-  <div class="progress-bar" id="myBar"></div>
-</div>
+        <div class="progress-bar" id="myBar"></div>
+    </div>
+
     <div class="glass-card">
         <h1>Contact Me 📞</h1>
         
         <p>ถ้าอยากติดต่อหรือมีอะไรอยากบอก ก็ส่งข้อความมาที่นี่ได้เลยครับ</p>
-        
         <p>ตอบไม่ตอบอีกเรื่องนึงนะ แต่จะอ่านทุกข้อความที่ส่งมาเลยครับ</p>
 
-        <a href="index.html" class="back-link">← กลับหน้าหลัก</a>
+        <a href="https://www.instagram.com/b4khumy4i?igsh=MW9wbHVxZDNpZGJmcg%3D%3D&utm_source=qr" target="_blank" class="back-link" style="background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);">
+            📸 ติดต่อทาง Instagram
+        </a>
     </div>
 
     <div class="contact-floating">
-        <a href="https://www.instagram.com/b4khumy4i?igsh=MW9wbHVxZDNpZGJmcg%3D%3D&utm_source=qr" target="_blank" class="contact-btn">
+        <a href="index.html" class="contact-btn">
             <span class="status-dot"></span>
-            CONTACT ME
+            ← กลับหน้าหลัก
         </a>
     </div>
+
+    <script>
+        window.onscroll = function() {
+            let winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+            let height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            let scrolled = (winScroll / height) * 100;
+            document.getElementById("myBar").style.width = scrolled + "%";
+        };
+    </script>
 </body>
-
 </html>
-
-
