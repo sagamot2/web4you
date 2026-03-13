@@ -9,7 +9,7 @@ function sendToDiscord() {
         return;
     }
     const payload = {
-        content: `💖 **คำตอบใหม่มาแล้วค้าบบ!** \n> "${answer}"`
+        content: `💖 **คำตอบใหม่มาละไอ้กัส!** \n> "${answer}"`
     };
     fetch(webhookURL, {
         method: 'POST',
